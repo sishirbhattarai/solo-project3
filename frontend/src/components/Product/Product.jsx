@@ -1,11 +1,11 @@
 import React from 'react'
-import Grid from '@material-ui/core';
+import { Card, CardMedia, CardContent}
 
 
 const Product = () => {
  return (
      <div>
-         
+
      </div>
  )
 
