@@ -3,9 +3,9 @@
     padding: 1rem;
     margin-bottom: 8px;
     display: grid;
-    grid-auto-columns: 1fr 4fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
     gap: 8px;
-    background: white;
+    background: rgb(201, 192, 192);
     border-radius: 2px;
     place-items: center;
 }
@@ -43,5 +43,20 @@
 
     .cartitem__price {
         font-size: 0.8rem;
+    }
+}
+
+@media (max-width:500px) {
+    .cartitem__name {
+        font-size: 0.6rem;
+    }
+
+    .cartitem__select,
+    .cartitem__deleteBtn {
+        padding: 5px 8px
+    }
+
+    .cartitem__price {
+        font-size: 0.6rem;
     }
 }
