@@ -1,5 +1,14 @@
 const products = [
   {
+    name: "Nike Mens T-shirt",
+    imageUrl:
+      "https://ae01.alicdn.com/kf/HTB19JUcbjzuK1RjSspeq6ziHVXaU/Original-New-Arrival-NIKE-AS-M-NSW-POLO-MATCHUP-PQ-NVLTY-Men-s-T-shirts-short.jpg",
+    description:
+      "A great fit for performance and everyday wear, shop men's shirts & t-shirts.",
+    price: 99.99,
+    countInStock: 15,
+  },
+  {
     name: "Iphone 12 Pro Max",
     imageUrl:
       "https://images.squarespace-cdn.com/content/v1/5a8a950b49fc2b8e07168a4b/1603174911818-LXNSDWJUKZX87KGZJEL9/ke17ZwdGBToddI8pDm48kHLkaGepgEi8AZUCH-v7pxF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmzUsryC7riGV7bTeYhg5Seo4guSoNOddIiW0jLvghl_108-ij1mxYFmcrilRZ9VLb/ES12SC67-JIN%28Amazon%29_.jpg?format=1000w",
