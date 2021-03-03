@@ -4,14 +4,19 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 
-const reducer = combineReducers({
 
-})
+import { cartReducer } from "./reducers/cartReducers";
+
+
+const reducer = combineReducers({
+    cart: cartReducer
+
+});
 
 //handle multiple requests with thunk middleware
 const middleware = [thunk];
 
-//using compositeWu=ithDevtools as an enhancer
+//using compositeWithDevtools as an enhancer
 const store = createStore(
     reducer, composeWithDevTools(applyMiddleware(...middleware))
 )
