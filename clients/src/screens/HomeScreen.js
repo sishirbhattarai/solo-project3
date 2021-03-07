@@ -1,43 +1,52 @@
 import React from 'react';
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-
-
 import "./HomeScreen.css";
-import Product from "../components/Product.js";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
+// Components
+import Product from "../components/Product";
 
+//Actions
 import { getProducts as listProducts } from "../redux/actions/productActions";
 
 const HomeScreen = () => {
+  const dispatch = useDispatch();
 
-    const dispatch = useDispatch();
-
-    const getProducts = useSelector(state => state.getProducts);
-    const { products, loading, error } = getProducts;
+  const getProducts = useSelector((state) => state.getProducts);
+  const { products, loading, error } = getProducts;
 
     //everytime the page loads, the page will list the products
     useEffect(() => {
-        dispatch(listProducts())}, [dispatch]);
+        dispatch(listProducts());
+      }, [dispatch]);
 
-
-    return (
+return (
         <div className="homescreen">
-            <h2 className="homescreen__title">Recent Products</h2>
+          <h2 className="homescreen__title">Latest Featured Products</h2>
+          <div className="homescreen__products">
+          
 
-            <div className="homescreen__products">
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-
-            </div>
-        </div>
-    )
-}
+    {/* if loading show loader (h2), if error show error, else show product */}
+    {loading ? (
+          <h2>Loading...</h2>
+        ) : error ? (
+          <h2>{error}</h2>
+        ) : (
+          products.map((product) => (
+            <Product
+              key={product._id}
+              name={product.name}
+              description={product.description}
+              price={product.price}
+              imageUrl={product.imageUrl}
+              productId={product._id}
+            />
+           
+          ))
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default HomeScreen;
