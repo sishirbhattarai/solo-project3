@@ -1,40 +1,43 @@
 import React from 'react';
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-const Navbar = ({click}) => {
-    return (
-        <nav className="navbar">
-           <div className="navbar__logo" >
-               <h2>Shopping Hangover</h2>
-           </div>
+const Navbar = ({ click }) => {
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
 
-           <ul className="navbar__links">
-               <li>
-                   <Link to="/cart" className="cart__link">
-                      <i className="fas fa-shopping-cart"></i>
-                        <span>
-                          Cart
-                          <span className="cartlogo__badge">0</span>
-                        </span>
-                   </Link>
-               </li>
-               <li>
-                   <Link to="/">
-                      Shop
-                   </Link>
-               </li>
-           </ul>
+  const getCartCount = () => {
+    return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0);
+  };
 
-           <div className="hamburger__menu" onClick={click}>
-               <div></div>
-               <div></div>
-               <div></div>
-           </div>
+  return (
+    <nav className="navbar">
+      <div className="navbar__logo">
+        <h2>SHOPPING FROM HOME</h2>
+      </div>
 
-        </nav>
-    )
-}
+      <ul className="navbar__links">
+        <li>
+          <Link to="/cart" className="cart__link">
+            <i className="fas fa-shopping-cart"></i>
+            <span>
+              Cart <span className="cartlogo__badge">{getCartCount()}</span>
+            </span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/shop">Shop</Link>
+        </li>
+      </ul>
 
+      <div className="hamburger__menu" onClick={click}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
