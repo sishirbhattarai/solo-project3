@@ -1,3 +1,4 @@
+var cors = require('cors')
 require("dotenv").config();
 
 const express = require("express");
@@ -7,14 +8,15 @@ const productRoutes = require("./routes/productRoutes");
 connectDB();
 //const mongoose = require("mongoose");
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 
 // app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+app.use(cors())
 app.use('/api/products', productRoutes);
+
 
 // app.use(express.static("public"));
 

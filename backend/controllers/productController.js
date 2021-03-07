@@ -5,7 +5,6 @@ const Product = require("../models/Product");
 const getAllProducts = async (req, res) => {
     try {
       const products = await Product.find({});
-  
       res.status(200).json(products);
 
     } catch (err) {
@@ -28,5 +27,4 @@ const getAllProducts = async (req, res) => {
 
 
   module.exports = { getAllProducts, getProductById, }
-
 
