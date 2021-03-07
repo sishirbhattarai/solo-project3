@@ -1,46 +1,81 @@
-import React from 'react'
+import React from 'react';
 import "./ProductScreen.css";
+import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
-const ProductScreen = () => {
-    return (
-        <div className="productscreen">
-            <div className="productscreen__left">
-                <div className="left__image">
-                    <img src="https://ae01.alicdn.com/kf/HTB19JUcbjzuK1RjSspeq6ziHVXaU/Original-New-Arrival-NIKE-AS-M-NSW-POLO-MATCHUP-PQ-NVLTY-Men-s-T-shirts-short.jpg" alt="product name"/>
-                </div>
+// Actions
+import { getProductDetails } from "../redux/actions/productActions";
+import { addToCart } from "../redux/actions/cartActions";
 
-                <div className="left__info">
-                <p className="left__name">Product 1</p>
-                <p>Price: $99.99</p>
-                <p>Description: A great fit for performance and everyday wear, shop men's shirts & t-shirts.</p>
-                </div>
+const ProductScreen = ({ match, history }) => {
+  const [qty, setQty] = useState(1);
+  const dispatch = useDispatch();
+
+  const productDetails = useSelector((state) => state.getProductDetails);
+  const { loading, error, product } = productDetails;
+
+  useEffect(() => {
+    if (product && match.params.id !== product._id) {
+      dispatch(getProductDetails(match.params.id));
+    }
+  }, [dispatch, match, product]);
+
+  const addToCartHandler = () => {
+    dispatch(addToCart(product._id, qty));
+    history.push("/cart");
+  };
+
+  return (
+    <div className="productscreen">
+      {loading ? (
+        <h2>Loading...</h2>
+      ) : error ? (
+        <h2>{error}</h2>
+      ) : (
+        <>
+          <div className="productscreen__left">
+            <div className="left__image">
+              <img src={product.imageUrl} alt={product.name} />
             </div>
-            <div className="productscreen__right">
-                <div className="right__info">
-                    <p>
-                        Price: <span>$99.99</span>
-                    </p>
-                    <p>
-                        Status: <span>In Stock</span>
-                    </p>
-                    <p>
-                        Quantity:
-                        <select>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </p>
-                    <p>
-                        <button type="button">Add to Cart</button> 
-                    </p>
-                </div>
+            <div className="left__info">
+              <p className="left__name">PlayStation 5</p>
+              <p>Price: ${product.price}</p>
+              <p>Description: {product.description}</p>
             </div>
-        </div>
-
-    )
-}
+          </div>
+          <div className="productscreen__right">
+            <div className="right__info">
+              <p>
+                Price:
+                <span>${product.price}</span>
+              </p>
+              <p>
+                Status:
+                <span>
+                  {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
+                </span>
+              </p>
+              <p>
+                Qty
+                <select value={qty} onChange={(e) => setQty(e.target.value)}>
+                  {[...Array(product.countInStock).keys()].map((x) => (
+                    <option key={x + 1} value={x + 1}>
+                      {x + 1}
+                    </option>
+                  ))}
+                </select>
+              </p>
+              <p>
+                <button type="button" onClick={addToCartHandler}>
+                  Add To Cart
+                </button>
+              </p>
+            </div>
+          </div>
+        </>
+      )}
+    </div>
+  );
+};
 
 export default ProductScreen;
