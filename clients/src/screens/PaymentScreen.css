@@ -1,2 +1,42 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background-color: white;
+    width:800px;
+    height: 800px;
+    padding: 25px;
+    margin: 25px auto 0;
+    box-shadow: 0px 0px 20px black;
+    font-size: 1.85rem;
+}
+
+.wrapper h2 {
+    background-color: rgb(230, 109, 109);
+    color: black;
+    font-size: 24px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px dotted #333;
+}
+
+h4 {
+    padding-bottom: 5px;
+    color: black
+}
+
+.input-group {
+    margin-bottom: 8px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0;
+}
+
 
   

@@ -63,7 +63,7 @@ function Payment() {
        name="pay"  checked className="radio"/>
        <label for="bc1"><span><i class="fa fa-cc-paypal"></i>Paypal</span></label>
         </div>
-      </div>
+    </div>
     <div className="input-group">
       <div className="input-box">
         <h4>Payment Details</h4>
@@ -71,7 +71,7 @@ function Payment() {
         required className="name"/>
         <i class="fa fa-credit-card icon"></i>
         </div>
-      </div>
+    </div>
     <div className="input-group">
       <div className="input-box">
         <h4>Payment Details</h4>
@@ -93,6 +93,13 @@ function Payment() {
           <option>2024</option>
         </select>
       </div>
+    </div>
+    <div className="input-group">
+      <div className="input-box">
+        <a href="/shop">
+         <button type="submit">Pay Now</button>
+         </a>
+        </div>
     </div>
   </form>
 </div>
