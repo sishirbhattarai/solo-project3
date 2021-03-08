@@ -14,7 +14,7 @@ const Navbar = ({ click }) => {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
-        <h2>SHOPPING FROM HOME</h2>
+        <h2 href="/">SHOPPING FROM HOME</h2>
       </div>
 
       <ul className="navbar__links">
@@ -28,6 +28,12 @@ const Navbar = ({ click }) => {
         </li>
         <li>
           <Link to="/shop">Shop</Link>
+        </li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/Login">Login</Link>
         </li>
       </ul>
 
