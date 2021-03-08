@@ -59,7 +59,7 @@ small {
 }
 
 .footer {
-    background: rgb(35, 5, 104);
+    background: linear-gradient(rgb(112, 121, 252), #6e0a48);
     color: #8a8a8a;
     font-size: 16px;
     padding: 60px 0 20px;
