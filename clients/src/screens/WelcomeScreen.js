@@ -22,7 +22,7 @@ function Welcome() {
     <div className="container-1">
         <div className="row">
             <div className="col-2">
-                <img src="/mobile.jpg" className="iphone" alt="electronic" />
+                <img src="/Capture.PNG" className="iphone" alt="electronic" />
             </div>
             <div className="col-2">
                 <p>Now Available !</p>
