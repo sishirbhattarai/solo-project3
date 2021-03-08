@@ -7,7 +7,7 @@ function Welcome() {
 <div className="header">
   <div className ="row">
     <div className="col-2">
-        <h1> Give Your Shopping <br />A New Style!</h1>
+        <h1> A new ERA of shopping is here. <br />Give Your Shopping A New Style!</h1>
         
         <p>If you can't stop thinking about it...BUY IT.</p>
         <a href="/shop" class="btn">Shop Now</a>
