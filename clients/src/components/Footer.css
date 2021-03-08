@@ -1,6 +1,6 @@
 .footer {
     background: linear-gradient(rgb(112, 121, 252), #6e0a48);
-    color: #8a8a8a;
+    color: #c9bcbc;
     font-size: 16px;
     padding: 1px 0 5px;
     position: fixed;
@@ -45,8 +45,8 @@ ul {
     width: 140px;
 }
 
-.copyright {
+p {
     text-align: center;
-    margin-bottom: 1px;
+    color: black;
 
 }

@@ -21,7 +21,6 @@ function Footer() {
                     <h3>Follow us</h3>
                     <ul>
                         <li>Facebook</li>
-                        <li>Twitter</li>
                         <li>YouTube</li>
                     </ul>
                 </div>
