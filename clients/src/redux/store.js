@@ -19,9 +19,19 @@ const reducer = combineReducers({
 //handle multiple requests with thunk middleware
 const middleware = [thunk];
 
+const cartItemsInLocalStorage = localStorage.getItem("cart")
+  ? JSON.parse(localStorage.getItem("cart"))
+  : [];
+
+const INITIAL_STATE = {
+  cart: {
+    cartItems: cartItemsInLocalStorage,
+  },
+};
+
 //using compositeWithDevtools as an enhancer
 const store = createStore(
-    reducer, composeWithDevTools(applyMiddleware(...middleware))
+    reducer, INITIAL_STATE, composeWithDevTools(applyMiddleware(...middleware))
 )
 
 export default store;
