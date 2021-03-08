@@ -19,11 +19,25 @@ function Welcome() {
     </div>
 </div>
 
+<div className="categories">
+    <div className="row">
+        <div className="col-3">
+            
+        </div>
+        <div className="col-3"></div>
+        <div className="col-3"></div>
+        <div className="col-3"></div>
+
+    </div>
+</div>
+
 <div className="exclusive">
     <div className="container-1">
         <div className="row">
             <div className="col-2">
-                <img src="/Capture.PNG" href="/shop" className="iphone" alt="electronic" />
+                <a href="/shop">
+                <img src="/Capture.PNG" className="iphone" alt="electronic" />
+                </a>
             </div>
             <div className="col-2">
                 <p>Now Available !</p>

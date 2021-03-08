@@ -42,6 +42,8 @@
     color:white;
     border: 1px solid black;
     cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
 }
 
 .cartscreen__right div button:hover {
