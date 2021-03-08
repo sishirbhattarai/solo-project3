@@ -8,6 +8,7 @@ import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
 import WelcomeScreen from "./screens/WelcomeScreen";
+import PaymentScreen from "./screens/PaymentScreen";
 
 import Navbar from "./components/Navbar";
 import Backdrop from "./components/Backdrop";
@@ -29,6 +30,7 @@ function App() {
            <Route exact path="/shop" component={HomeScreen}/>
            <Route exact path="/product/:id" component={ProductScreen}/>
            <Route exact path="/cart" component={CartScreen}/>
+           <Route exact path="/payment" component={PaymentScreen}/>
          </Switch>
        </main>
        <Footer />
