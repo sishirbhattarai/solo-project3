@@ -19,18 +19,6 @@ function Welcome() {
     </div>
 </div>
 
-<div className="categories">
-    <div className="row">
-        <div className="col-3">
-            
-        </div>
-        <div className="col-3"></div>
-        <div className="col-3"></div>
-        <div className="col-3"></div>
-
-    </div>
-</div>
-
 <div className="exclusive">
     <div className="container-1">
         <div className="row">
@@ -47,7 +35,7 @@ function Welcome() {
 
         </div>
     </div>
-  </div>
+   </div>
 </div>
 
 )};
