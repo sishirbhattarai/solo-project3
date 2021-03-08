@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
+import WelcomeScreen from "./screens/WelcomeScreen";
 
 import Navbar from "./components/Navbar";
 import Backdrop from "./components/Backdrop";
@@ -22,7 +23,8 @@ function App() {
       <Backdrop show={sideToggle} click={() => setsideToggle(false)}/>
        <main>
          <Switch>
-           <Route exact path="/" component={HomeScreen}/>
+          <Route exact path="/" component={WelcomeScreen}/>
+           <Route exact path="/shop" component={HomeScreen}/>
            <Route exact path="/product/:id" component={ProductScreen}/>
            <Route exact path="/cart" component={CartScreen}/>
          </Switch>
