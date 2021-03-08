@@ -36,7 +36,7 @@ function Welcome() {
         </div>
     </div>
    </div>
-
+{/* 
    <div className="footer">
         <div className="container">
             <div className="row">
@@ -70,7 +70,7 @@ function Welcome() {
             </div>
             <p className="copyright"> Copyright@easyshopping.com 2021</p>
         </div>
-    </div>
+    </div> */}
 </div>
 
 )};

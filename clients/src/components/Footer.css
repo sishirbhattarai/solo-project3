@@ -1,0 +1,52 @@
+.footer {
+    background: linear-gradient(rgb(112, 121, 252), #6e0a48);
+    color: #8a8a8a;
+    font-size: 16px;
+    padding: 1px 0 5px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+.footer p {
+    color: #8a8a8a;
+}
+
+.footer h3 {
+    color: #ffff;
+    margin-bottom: 20px;
+}
+
+.footer-col-1, .footer-col-3, .footer-col-4 {
+    min-width: 150px;
+    margin-bottom: 10px;
+} 
+
+.footer-col-1 {
+    flex-basis: 30% ;
+}
+
+.footer-col-3, .footer-col-4 {
+   flex-basis: 12%;
+   text-align: center;
+}
+
+ul {
+    list-style-type: vertical;
+}
+
+.app-logo {
+    margin-top: 10px;
+}
+
+.app-logo img {
+    width: 140px;
+}
+
+.copyright {
+    text-align: center;
+    margin-bottom: 1px;
+
+}
