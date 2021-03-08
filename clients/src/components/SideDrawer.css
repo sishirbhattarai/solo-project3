@@ -1,13 +1,13 @@
 .sidedrawer {
     width: 70%;
     height: 100vh;
-    background: linear-gradient(#f45925, #a68a43);
-    z-index: 200;
+    background: linear-gradient(#2597f4, #ee7e6b);
+    z-index: 300;
     position: fixed;
     top: 0;
     left: 0;
     transform: translateX(-100%);
-    transition: all 0.1s ease-out;
+    transition: all 1s ease-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
