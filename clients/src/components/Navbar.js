@@ -14,7 +14,7 @@ const Navbar = ({ click }) => {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
-        <h2 href="/">SHOPPING FROM HOME</h2>
+        <h2>SHOPPING FROM HOME</h2>
       </div>
 
       <ul className="navbar__links">
