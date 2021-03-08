@@ -1,5 +1,5 @@
 .footer {
-    background: linear-gradient(rgb(112, 121, 252), #6e0a48);
+    background: linear-gradient(rgb(7, 8, 26), #30202b);
     color: #c9bcbc;
     font-size: 16px;
     padding: 1px 0 5px;
@@ -45,8 +45,4 @@ ul {
     width: 140px;
 }
 
-p {
-    text-align: center;
-    color: black;
 
-}
