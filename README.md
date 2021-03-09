@@ -14,10 +14,15 @@ https://soloproject1.herokuapp.com/
 ## Github link
 https://github.com/sishirbhattarai/solo-project3
 
+## Technology Used: 
+
+HTML, CSS, React, Reducers, Node, MongoDB
+
 ## License
 Apache
 
 ## Test:
+
 ![](./Assets/Capture1.PNG)
 
 ![](./Assets/Capture2.PNG)
@@ -25,6 +30,10 @@ Apache
 ![](./Assets/Capture3.PNG)
 
 ![](./Assets/Capture4.PNG)
+
+![](./Assets/Capture5.PNG)
+
+![](./Assets/Capture6.PNG)
 
 ## Contributors
 Sishir Bhattarai
