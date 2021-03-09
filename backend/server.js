@@ -29,9 +29,16 @@ app.use('/api/products', productRoutes);
 // routes
 // app.use(require("./routes/api.js"));
 if(process.env.NODE_ENV === "production") {
-  // Set static folder
-  app.use(express.static("client/build"))
-  app.get("*", (req, res) => res.sendFile(path.resolve(__dirname, "../clients", "build", "index.html")))
+//   // Set static folder
+//   app.use(express.static("client/build"))
+//   app.get("*", (req, res) => res.sendFile(path.resolve(__dirname, "../clients", "build", "index.html")))
+// }
+
+const root = require('path').join(__dirname, '../clients', 'build')
+app.use(express.static(root));
+app.get("*", (req, res) => {
+    res.sendFile('index.html', { root });
+ })
 }
 
 app.listen(PORT, () => {
