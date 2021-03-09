@@ -1,6 +1,7 @@
 var cors = require('cors')
 require("dotenv").config();
 
+const path = require("path");
 const express = require("express");
 const connectDB = require("./config/db");
 const productRoutes = require("./routes/productRoutes");
@@ -27,6 +28,11 @@ app.use('/api/products', productRoutes);
 
 // routes
 // app.use(require("./routes/api.js"));
+if(process.env.NODE_ENV === "production") {
+  // Set static folder
+  app.use(express.static("client/build"))
+  app.get("*", (req, res) => res.sendFile(path.resolve(__dirname, "client", "build", "index.html")))
+}
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);

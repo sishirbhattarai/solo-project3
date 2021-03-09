@@ -43,15 +43,6 @@ function Payment() {
         placeholder="YYYY" 
         className="DOB"/>   
       </div>
-      <div className="input-box">
-        <h4>Gender</h4>
-                <input type="radio" id="b1"
-       name="gender"  checked className="radio"/>
-                <label for="b1">Male</label>
-                <input type="radio" id="b2"
-       name="gender"  checked className="radio"/>
-                <label for="b2">Female</label>
-      </div>
     </div>
     <div className="input-group">
       <div className="input-box">
