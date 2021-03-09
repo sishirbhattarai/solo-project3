@@ -31,7 +31,7 @@ app.use('/api/products', productRoutes);
 if(process.env.NODE_ENV === "production") {
   // Set static folder
   app.use(express.static("client/build"))
-  app.get("*", (req, res) => res.sendFile(path.resolve(__dirname, "clients", "build", "index.html")))
+  app.get("*", (req, res) => res.sendFile(path.resolve(__dirname, "../clients", "build", "index.html")))
 }
 
 app.listen(PORT, () => {
