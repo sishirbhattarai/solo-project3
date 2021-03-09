@@ -1,0 +1,11 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: radial-gradient(#fff, #ffd6d6);
+    overflow: auto;
+    font-size: 1.5rem;
+}
+
+.thankyou {
+    text-align: center;
+    background-color: radial-gradient(#fff, #ffd6d6);
+}

@@ -9,6 +9,7 @@ import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
 import WelcomeScreen from "./screens/WelcomeScreen";
 import PaymentScreen from "./screens/PaymentScreen";
+import Thankyouscreen from "./screens/Thankyouscreen";
 
 import Navbar from "./components/Navbar";
 import Backdrop from "./components/Backdrop";
@@ -31,6 +32,7 @@ function App() {
            <Route exact path="/product/:id" component={ProductScreen}/>
            <Route exact path="/cart" component={CartScreen}/>
            <Route exact path="/payment" component={PaymentScreen}/>
+           <Route exact path="/thankyou" component={Thankyouscreen}/>
          </Switch>
        </main>
        <Footer />

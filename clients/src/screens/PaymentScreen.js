@@ -1,5 +1,6 @@
 import React from 'react';
 import "./PaymentScreen.css";
+import { Link } from "react-router-dom";
 
 
 function Payment() {
@@ -84,9 +85,10 @@ function Payment() {
     </div>
     <div className="input-group">
       <div className="input-box">
-        <a href="/shop">
-         <button type="submit">Pay Now</button>
-         </a>
+        
+         <button><Link to="/thankyou">Pay Now</Link></button>
+         
+         
         </div>
     </div>
   </form>
