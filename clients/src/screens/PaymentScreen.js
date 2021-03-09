@@ -27,7 +27,6 @@ function Payment() {
         <input type="email"
         placeholder="Email address" required
         className="name"/>
-        <i className="fa fa-envelope"></i>
       </div>
     </div>
     <div className="input-group">
@@ -56,20 +55,9 @@ function Payment() {
     <div className="input-group">
       <div className="input-box">
         <h4>Payment Details</h4>
-        <input type="radio" id="bc1"
-       name="pay"  checked className="radio"/>
-       <label for="bc1"><span><i class="fa fa-cc-visa"></i>Credit Card</span></label>
-       <input type="radio" id="bc2"
-       name="pay"  checked className="radio"/>
-       <label for="bc1"><span><i class="fa fa-cc-paypal"></i>Paypal</span></label>
-        </div>
-    </div>
-    <div className="input-group">
-      <div className="input-box">
-        <h4>Payment Details</h4>
         <input type="tel" placeholder="Card Number"
         required className="name"/>
-        <i class="fa fa-credit-card icon"></i>
+       
         </div>
     </div>
     <div className="input-group">
@@ -77,7 +65,7 @@ function Payment() {
         <h4>Payment Details</h4>
         <input type="tel" placeholder="Card CVV"
         required className="name"/>
-        <i class="fa fa-user icon"></i>
+        
       </div>
       <div class="input-box">
         <select>
